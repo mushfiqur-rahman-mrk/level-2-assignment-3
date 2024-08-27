@@ -47,7 +47,7 @@ const bookingSchema = new Schema<TBooking>(
         }
       } else if (this.car && 'pricePerHour' in this.car) {
         // Use pricePerHour if car data is already populated
-        pricePerHour = this.car.pricePerHour;
+        pricePerHour = this.totalCost;
       }
   
       // Calculate totalCost if pricePerHour is available
